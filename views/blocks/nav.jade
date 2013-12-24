@@ -1,18 +1,15 @@
-div.header.navbar.navbar-inverse.navbar-fixed-top
-    div.container
-        div.navbar-header
-            button.navbar-toggle.collapsed
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a.navbar-brand(href="/") My Project
-        div.navbar-collapse.collapse
-            ul.nav.navbar-nav
-                li(class="#{page=='index' ? 'active' : ''}")
-                    a(href="/") Home
-                li(class="#{page=='contact' ? 'active' : ''}")
-                    a(href="/contact") Contact
-                li(class="#{page=='about' ? 'active' : ''}")
-                    a(href="/about") About
-                li(class="#{page=='todos' ? 'active' : ''}")
-                    a(href="/todos") Todos
+div.tm-navbar.uk-navbar.uk-navbar-attached
+    div.uk-container.uk-container-center
+        div.uk-navbar-brand.uk-hidden-small My Project
+        a.uk-navbar-toggle.uk-visible-small(data-uk-offcanvas="",href="#tm-offcanvas")
+        div.uk-navbar-brand.uk-navbar-center.uk-visible-small My Project
+
+        ul.uk-navbar-nav.uk-hidden-small
+            li(class="#{page=='index' ? 'uk-active' : ''}")
+                a(href="/") Home
+            li(class="#{page=='contact' ? 'uk-active' : ''}")
+                a(href="/contact") Contact
+            li(class="#{page=='about' ? 'uk-active' : ''}")
+                a(href="/about") About
+            li(class="#{page=='todos' ? 'uk-active' : ''}")
+                a(href="/todos") Todos

@@ -1,7 +1,5 @@
-express =        require 'express'
-engines =        require 'consolidate'
-
-routes  =        require './routes'
+express = require 'express'
+engines = require 'consolidate'
 
 exports.startServer = (config, callback) ->
 
@@ -14,6 +12,7 @@ exports.startServer = (config, callback) ->
   app.configure ->
     app.set 'port', port
     app.set 'views', config.server.views.path
+    app.locals.basedir = config.server.views.path
     app.engine config.server.views.extension, engines[config.server.views.compileWith]
     app.set 'view engine', config.server.views.extension
     app.use express.favicon()
@@ -26,7 +25,24 @@ exports.startServer = (config, callback) ->
   app.configure 'development', ->
     app.use express.errorHandler()
 
-  app.get '/', routes.index(config)
+  options =
+    reload:    config.liveReload.enabled
+    optimize:  config.isOptimize ? false
+    cachebust: if process.env.NODE_ENV isnt "production" then "?b=#{(new Date()).getTime()}" else ''
+
+  app.get '/', (req, res) ->
+    options.page = 'index'
+    options.appType = false
+    res.render options.page, options
+
+  app.get '/todos', (req, res) ->
+    options.page = 'todos'
+    options.appType = 'todos'
+    res.render options.page, options
+
+  app.get '/:page', (req, res) ->
+    options.page = req.params.page
+    options.appType = false
+    res.render options.page, options
 
   callback(server)
-

@@ -1,69 +1,86 @@
 extends /layouts/default
 
 block title
-    title Mimosa &rsaquo; #{page}
+	title Mimosa &rsaquo; #{page}
 
 block nav
-    include /blocks/nav
+	include /blocks/nav
 
 block content
-    div.content.container
-        div.jumbotron
-            h1
-                | Mimosa-Emberboots
-            p
-                | Check below for more information.
-        div.row
-            div.col-6.col-sm-6.col-lg-4
-                h2
-                    i.icon-cog.icon-fixed-width
-                    | Ember
-                p
-                    | Using the latest technology for best development, this module is using
-                    a(href="http://www.emberjs.com", target="_blank") EmberJS
-                    under the hood to be flexible enough for your needs.
-            div.col-6.col-sm-6.col-lg-4
-                h2
-                    i.icon-twitter.icon-fixed-width
-                    | Bootstrap
-                p
-                    | Using the latest version of
-                    a(href="http://getbootstrap.com", target="_blank") Twitter Bootstrap
-                    | your application will be loaded with great styles from the beginning!
-            div.col-6.col-sm-6.col-lg-4
-                h2
-                    i.icon-flag.icon-fixed-width
-                    | Font-Awesome
-                p
-                    | Scaled icons everywhere with
-                    a(href="http://fortawesome.github.io/Font-Awesome", target="_blank") Font Awesome
-                    |. No more icon sprites or styling issues!
-        div.row
-            div.col-6.col-sm-6.col-lg-4
-                h2
-                    i.icon-leaf.icon-fixed-width
-                    | Mimosa
-                p
-                    | This module is a
-                    a(href="http://mimosa.io", target="_blank") Mimosa
-                    | skeleton. If you have troubles understanding or setting it up,
-                    | go and take a look there!
-            div.col-6.col-sm-6.col-lg-4
-                h2
-                    i.icon-code.icon-fixed-width
-                    | Emblem
-                p
-                    | Using the
-                    a(href="http://emblemjs.com", target="_blank") Emblem
-                    | template language on th client.
-                    | No mess with objects, use blocks and includes.
-            div.col-6.col-sm-6.col-lg-4
-                h2
-                    i.icon-exchange.icon-fixed-width
-                    | Express
-                p
-                    a(href="http://expressjs.com/", target="_blank") Express
-                    | is used to provide a strong, well maintained and documented middleware.
+	div.uk-margin-top
+		div.uk-container.uk-container-center
+			article.uk-article
+				h1.uk-article-header Mimosa-Emberkit
+				p.uk-article-lead
+					| This skeleton is built to allow newcomers or experts to quickly generate a simple app for EmberJS with a good UI.
+				p
+					| Check the contents below to see what it's built on!
+				hr.uk-article-divider
+			div.uk-grid.uk-margin-top
+				div.uk-width-1-3
+					article.uk-article
+						h2.uk-article-header
+							i.uk-icon-cog
+							|  EmberJS
+						p.uk-article-meta
+							a(href="http://www.emberjs.com", target="_blank") EmberJS
+							|  is made by 
+							a(href="http://www.tilde.io", target="_blank") Tilde Inc
+							| . 
+							a.uk-icon-button.uk-icon-twitter(href="https://twitter.com/emberjs", target="_blank")
+							a.uk-icon-button.uk-icon-github(href="https://github.com/emberjs/ember.js/", target="_blank")
+						p
+							| Using the latest technology for best development, this module is using 
+							| EmberJS under the hood to be flexible enough for your needs.
+				div.uk-width-1-3
+					article.uk-article
+						h2.uk-article-header
+							i.uk-icon-magnet
+							|  UIKit
+						p.uk-article-meta
+							a(href="http://www.getuikit.com", target="_blank") UIKit
+							|  is made by 
+							a(href="http://www.yootheme.com/", target="_blank") YOOtheme
+							| . 
+							a.uk-icon-button.uk-icon-twitter(href="https://twitter.com/getuikit", target="_blank")
+							a.uk-icon-button.uk-icon-github(href="https://github.com/uikit/uikit", target="_blank")
+						p
+							| A new starter css-framework for your application, it's neat and responsible-first. 
+							| Has great addons and includes some of the missing Bootstrap-features.
+				div.uk-width-1-3
+					h2
+						i.uk-icon-flag
+						|  Font-Awesome
+					p
+						| Scaled icons everywhere with 
+						a(href="http://fortawesome.github.io/Font-Awesome", target="_blank") Font Awesome
+						|. No more icon sprites or styling issues!
+			div.uk-grid
+				div.uk-width-1-3
+					h2
+						i.uk-icon-leaf
+						|  Mimosa
+					p
+						| This module is a 
+						a(href="http://mimosa.io", target="_blank") Mimosa 
+						| skeleton. If you have troubles understanding or setting it up, 
+						| go and take a look there!
+				div.uk-width-1-3
+					h2
+						i.uk-icon-code
+						|  Emblem
+					p
+						| Using the 
+						a(href="http://emblemjs.com", target="_blank") Emblem 
+						| template language on th client. 
+						| No mess with objects, use blocks and includes.
+				div.uk-width-1-3
+					h2
+						i.uk-icon-exchange
+						|  Express
+					p
+						a(href="http://expressjs.com/", target="_blank") Express 
+						| is used to provide a strong, well maintained and documented middleware.
 
 block foot
-    include /blocks/foot
+	include /blocks/foot
