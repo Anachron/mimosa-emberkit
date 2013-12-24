@@ -1,0 +1,17 @@
+doctype 5
+html
+    head
+        block head
+            block title
+            block info
+                include /blocks/info
+            block styles
+                include /blocks/styles
+            block scripts
+                include /blocks/scripts
+
+    body
+        div.wrap
+            block nav
+            block content
+        block foot
