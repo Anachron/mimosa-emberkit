@@ -16,7 +16,7 @@ exports.config = {
   and do not need to be installed. If a module is listed here that Mimosa is unaware of, Mimosa
   will attempt to install it.
   ###
-  # modules: ['jshint', 'csslint', 'server', 'require', 'minify-js', 'minify-css', 'live-reload', 'bower']
+  modules: ['jshint', 'csslint', 'server', 'require', 'minify-js', 'minify-css', 'live-reload', 'bower', 'server-reload']
 
   # watch:
     # sourceDir: "assets"                # directory location of web assets, can be relative to
