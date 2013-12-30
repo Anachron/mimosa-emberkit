@@ -8,6 +8,9 @@
 
 exports.config = {
   modules: ['jshint', 'csslint', 'server', 'require', 'minify-js', 'minify-css', 'live-reload', 'bower', 'server-reload']
+  liveReload:
+    enabled: true
+    additionalDirs: ['views']
   serverReload:
-    watch: ["server.coffee", "views", "routes"]
+    watch: ['server.coffee', 'routes']
 }
